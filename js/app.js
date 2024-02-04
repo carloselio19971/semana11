@@ -25,16 +25,25 @@ confirmarDeposito=document.querySelector("#confirmar-deposito");
 ingresarMonto=document.querySelector("#ingresar-monto");
 saldoInsuficiente=document.querySelector("#saldo-infuciente");
 console.log(retiraEfectivo);
+confirmarRetiroDinero=document.querySelector("#confirmar-retirar-efectivo");
 volverOperacionesHoyDesdeDetalleRetiro=document.querySelector("#volver-operaciones-hoy-detalle-retiro");
+ingresClaveCajero=document.querySelector("#ingresa-tu-clave-cajero");
+claveCajero=document.querySelector("#clave-cajero"); 
+mensajeClaveIncorrecta=document.querySelector("#clave-incorrecta");
+autorizando=document.querySelector("#autorizando");
+verificandotuclave=document.querySelector("#verificando-tu-clave");
+final=document.querySelector("#final");
+finalmontoretirad=document.querySelector("#monto-retirado");
+finalsaldo=document.querySelector("#saldo-final");
 
 
 let saldo=0;
 let saldoRetirar=0;
 let cuentasBCP =
 [
-    {nombre:"Carlos",password:"1234",dni:"73377610",saldo:100},
+    {nombre:"Carlos",password:"1254",dni:"73377610",saldo:100},
     {nombre:"Gera",password:"1234",dni:"12345678", saldo:2500},
-    {nombre:"Sabi",password:"1234",dni:"44517284", saldo:90},
+    {nombre:"Sabi",password:"0912",dni:"44517284", saldo:90},
 ];
 
 
@@ -59,6 +68,7 @@ document.addEventListener('DOMContentLoaded',()=>{
             mostrarPantalla(operacionhoy);
     });
     dineroRetirarInput.addEventListener("blur",(e)=>{
+            montoRetiro.innerHTML="";
         if(e.target.value.trim()!==''){
             saldoRetirar=e.target.value;
             console.log(saldoRetirar);
@@ -120,78 +130,59 @@ document.addEventListener('DOMContentLoaded',()=>{
         }
         
 
-
-      // if(saldoRetirar<=saldo){
-      //     let mensajeSaldoInsuficiente=document.createElement("p");
-      //     mensajeSaldoInsuficiente.textContent="Saldo Insuficiente";
-      //     mensajeSaldoInsuficiente.style.color="#012771;"
-      //     mensajeSaldoInsuficiente.style.fontSize="25px";
-      //     mensajeSaldoInsuficiente.style.marginTop ="25px";
-      //     saldoInsuficiente.appendChild(mensajeSaldoInsuficiente);
-      // }
-      // else {
-      //     if(saldoRetirar<20 && !saldoRetirar%10===0){
-      //         saldoInsuficiente.innerHTML="";
-      //         saldo-=saldoRetirar;
-      //         console.log("Saldo Actual"+saldo);
-      //         let elemento=document.createElement("h3");
-      //         console.log("Saldo a Retirar"+saldoRetirar);
-      //         elemento.textContent=`${saldoRetirar}`
-      //         montoRetiro.appendChild(elemento);
-      //         ocultarPantalla(retiraEfectivo);
-      //         mostrarPantalla(detallesRetiro); 
-      //     }
-      //     else{
-      //         let mensajeBilleteNoDisponible=document.createElement("p");
-      //         mensajeBilleteNoDisponible.textContent="Billete no disponible";
-      //         mensajeBilleteNoDisponible.style.color="#012771;"
-      //         mensajeBilleteNoDisponible.style.fontSize="25px";
-      //         mensajeBilleteNoDisponible.style.marginTop ="25px";
-      //         saldoInsuficiente.appendChild(mensajeBilleteNoDisponible)
-
-      //     }
-
-
-
-
-
-      // }
-
-
-      
-
-        // else if(!saldoRetirar%10===0){
-        //    
-        //    
-        //    
-        //    
-        //    
-        //    
-        // }
-        
-        // else if(saldoRetirar<20){
-        //     let mensajeBilleteNoDisponible=document.createElement("p");
-        //     mensajeBilleteNoDisponible.textContent="Billete no disponible";
-        //     mensajeBilleteNoDisponible.style.color="#012771;"
-        //     mensajeBilleteNoDisponible.style.fontSize="25px";
-        //     mensajeBilleteNoDisponible.style.marginTop ="25px";
-        //     saldoInsuficiente.appendChild(mensajeBilleteNoDisponible)
-        // }
-        // else{
-        //     console.log("Saldo Insuficiente");  
-        //     let mensajeSaldoInsuficiente=document.createElement("p");
-        //     mensajeSaldoInsuficiente.textContent="Saldo Insuficiente";
-        //     mensajeSaldoInsuficiente.style.color="#012771;"
-        //     mensajeSaldoInsuficiente.style.fontSize="25px";
-        //     mensajeSaldoInsuficiente.style.marginTop ="25px";
-        //     saldoInsuficiente.appendChild(mensajeSaldoInsuficiente);
-        // }
-
     });
     volverOperacionesHoyDesdeDetalleRetiro.addEventListener("click",()=>{
+        let saldoRetirado=Number.parseInt(saldoRetirar);
+        console.log("Saldo Retirado"+saldoRetirado);
+        console.log(typeof(saldoRetirado));
+        saldo+=saldoRetirado;
+        mostrarsaldo();
         ocultarPantalla(detallesRetiro); 
         mostrarPantalla(operacionhoy);
     })
+    confirmarRetiroDinero.addEventListener("click",()=>{
+                ocultarPantalla(detallesRetiro);
+                mostrarPantalla(ingresClaveCajero);
+    });
+    claveCajero.addEventListener("blur",(e)=>{
+        const clave=e.target.value;
+        const existeClave=cuentasBCP.some((cuenta)=>cuenta.password==clave);
+        finalmontoretirad.innerHTML=`Monto Retirado S/ ${saldoRetirar} `
+        finalsaldo.innerHTML=`Saldo Final S/ ${saldo}`
+
+        console.log(existeClave);
+        if(existeClave){
+            ocultarPantalla(ingresClaveCajero);
+            mostrarPantalla(verificandotuclave);
+
+            setTimeout(()=>{
+                ocultarPantalla(verificandotuclave);
+                mostrarPantalla(autorizando);   
+                setTimeout(()=>{
+                    ocultarPantalla(autorizando);
+                    mostrarPantalla(final);
+                    setTimeout(() => {
+                        ocultarPantalla(final);
+                        mostrarPantalla(pantallaInicio);
+                        setTimeout(() => {
+                            ocultarPantalla(pantallaInicio);
+                            mostrarPantalla(ingresarDNI);
+                        }, 3000);
+                    }, 3000);
+    
+                },3000);
+                
+            },3000);
+
+           
+
+        }
+        else{
+            console.log("Clave no valida")
+            mensajeClaveIncorrecta.innerHTML=`<p>Clave de Cajero invalida</p>`;
+        }
+
+    });
 
 //Ingresando tarjeta
 function ingresarTarjeta(){
@@ -263,13 +254,10 @@ function verSaldo(){
 function retirarDinero(e){
     e.preventDefault();
     saldoInsuficiente.innerHTML="";
-    let saldoRetirar=0;
     console.log(retiraEfectivo);
     let elemento=document.createElement("h3");
     elemento.innerHTML="";
     montoRetiro.innerHTML="";
-
-
         if(e.target.classList.contains("billete-20")){
           saldoRetirar=20;   
            elemento.textContent=`${saldoRetirar}`
@@ -330,65 +318,6 @@ function retirarDinero(e){
              
           }
      }
-
-
-
-
-
-
-        // else if(e.target.classList.contains("billete-50")){
-                // saldoRetirar=50;
-
-            // if(saldo>=saldoRetirar){
-                // saldo-=saldoRetirar;
-                // montoRetiro.appendChild(elemento);
-                // mostrarsaldo();
-                // ocultarPantalla(retiraEfectivo);
-                // mostrarPantalla(detallesRetiro);
-            // }
-            // else{
-                // MensajeSaldoInsuficiente();
-            // }
-    //  }
-    //    else if(e.target.classList.contains("billete-100")){
-            //  saldoRetirar=100;
-          
-            //  let elemento=document.createElement("h3");
-                    // console.log("Saldo a Retirar"+saldoRetirar);
-                    // elemento.textContent=`${saldoRetirar}`
-                    // montoRetiro.appendChild(elemento);
-
-            //  if(saldo>=saldoRetirar){
-                //  saldo-=saldoRetirar;
-                //  mostrarsaldo();
-                //  montoRetiro.appendChild(elemento);
-                //  ocultarPantalla(retiraEfectivo);
-                //  mostrarPantalla(detallesRetiro);
-            //  }
-            //  else{
-                // MensajeSaldoInsuficiente();
-            //  }
-    //    }
-    //    else if(e.target.classList.contains("billete-150")){
-            // saldoRetirar=150;
-
-            // let elemento=document.createElement("h3");
-            // console.log("Saldo a Retirar"+saldoRetirar);
-            // elemento.textContent=`${saldoRetirar}`
-            // montoRetiro.appendChild(elemento);  
-
-            // if(saldo>=saldoRetirar){
-            //   saldo-=saldoRetirar;
-            //   mostrarsaldo();
-            //   ocultarPantalla(retiraEfectivo);
-            //   mostrarPantalla(detallesRetiro);
-            // }
-            // else{
-                // MensajeSaldoInsuficiente();
-            // }
-    // }
-    
-    
 }
 
 function validarMontoRetirar(e){

@@ -335,21 +335,21 @@
                 </div>
                 <div id="billetes-retirar" class="billetes">
                     <div class="billete-20">
-                        <p>S/ 20</p>
+                        <p class="billete-20">S/ 20</p>
                     </div>
                     <div class="billete-50">
-                        <p>S/ 50</p>
+                        <p class="billete-50">S/ 50</p>
                     </div>
                     <div class="billete-100">
-                        <p>S/ 100</p>
+                        <p class="billete-100">S/ 100</p>
                     </div>
                     <div class="billete-150">
-                        <p>S/ 150</p>
+                        <p >S/ 150</p>
                     </div>
                 </div>
 
             </div>
-            <div class="footer-cuenta">
+            <!-- <div class="footer-cuenta">
                 <div class="cuenta">
                     <p class="estilo-cuenta"> Cuenta</p>
                     <p class="parrafo-ahorro-soles">Ahorro Soles S/</p>
@@ -368,7 +368,7 @@
                         </div>
                        </button>
                 </div>
-            </div>
+            </div> -->
         </div>
         <!--Detalles del Retiro-->
         <div id="detalle-retiro" class="detalles-retiro ancho-3">
@@ -411,7 +411,7 @@
                 </div>
                 <div class="botones-ver-sin-ver">
                     <div class="contenedor-retir-ver-saldo">
-                        <button class="btn-viendo-saldo">
+                        <button id="confirmar-retirar-efectivo" class="btn-viendo-saldo">
                             <p>Retirar</p>
                             <p></p>
                         </button>
@@ -483,7 +483,7 @@
         </div>
 
         <!--Ingres tu clave-->
-        <div class="ingresa-tu-clave ancho-azul-3">
+        <div id="ingresa-tu-clave-cajero" class="ingresa-tu-clave ancho-azul-3">
             <div class="ingresa-clave">
                 <div class="texto-clave">
                     <p>Ingresa tu Clave</p>
@@ -491,17 +491,21 @@
                 </div>
 
                 <div class="input-retiro">
-                     <input type="password" placeholder="4 numeros">
+                     <input id="clave-cajero" type="password" placeholder="4 numeros">
                     <img class="clave" src="iconos/lock_FILL0_wght400_GRAD0_opsz24.svg"> 
+                    
                 </div>
-
+                <div id="clave-incorrecta" style="margin-top: 20px;">
+                    
+                </div>
+                
             </div>
             <div class="imagen-cajero">
                 <img src="img/cajero.jpg">
             </div>
         </div>
         <!--Verificando clave-->
-        <div class="verificando-tu-clave ancho-azul-3">
+        <div id="verificando-tu-clave" class="verificando-tu-clave ancho-azul-3">
             <div class="ingresa-clave">
                 <div class="texto-clave">
                     <p>Ingresa tu Clave</p>
@@ -519,15 +523,19 @@
             </div>
         </div>
         <!--Autorizando-->
-        <div class="autorizando ancho-azul-3">
+        <div id="autorizando" class="autorizando ancho-azul-3">
             <div class="texto-autorizando">
                 <h3>Autorizando</h3>
                 <p>espera un momento</p>
-                <hr>
+                <div class="spinner-2" style="margin-top: 30px;">
+                    <div class="bounce1"></div>
+                    <div class="bounce2"></div>
+                    <div class="bounce3"></div>
+                  </div>
             </div>
         </div>
         <!--Final-->
-        <div class="final ancho-blanco">
+        <div id="final" class="final ancho-blanco">
                 <div class="imagen-final">
                     <img src="img/desinfectar-manos.jpg">
                 </div>
@@ -538,6 +546,15 @@
                 </div>
                 <div class="unidos-peru">
                     <p>#UnidosporelPerú</p>
+                </div>
+
+                <div class="informacion-retiro-final">
+                    <div id="monto-retirado" class="monto-retirado">
+                        <p>Monto Retirado S/</p>
+                    </div>
+                    <div id="saldo-final" class="saldo-final">
+                        <p>Saldo Final S/</p>
+                    </div>
                 </div>
         </div>
     </div>

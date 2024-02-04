@@ -1017,7 +1017,7 @@ padding-left: 50px;
 }
 
 .imagen-cajero{
-  height: 700px;
+  height: 450px;
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
@@ -1025,12 +1025,14 @@ padding-left: 50px;
 }
 
 .imagen-cajero img {
-  height: 80%;
+  height: 100%;
+  
 }
 
 .ingresa-clave{
 
   margin-top: 150px;
+  padding-top: 50px;
   margin-left: 150px;
   color:white;
   font-family: "Roboto", sans-serif;
@@ -1203,7 +1205,7 @@ padding-left: 50px;
 }
 
 .final{
-  display: none;
+   display: none; 
 }
 
 .ingresa-tu-clave{
@@ -1253,4 +1255,17 @@ padding-left: 50px;
     -webkit-transform: scale(1.0);
     transform: scale(1.0);
   }
+}
+
+.informacion-retiro-final{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.monto-retirado, .saldo-final{
+  height: 100px;
+  background-color: #012771;
+  font-size: 30px;
+  padding: 20px;
+  color:white;
 }
