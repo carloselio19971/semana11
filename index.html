@@ -321,14 +321,17 @@
                 </div>
             </div>
             <div class="informacion-monto-retirar">
-                <div class="ingresar-monto">
+                <div id="ingresar-monto" class="ingresar-monto">
                     <div class="texto-ingresar-monto">
                         <p>Ingrese Monto</p>
                     </div>
                     <div class="monto">
                         <input id="dinero-retirar-input" type="number" placeholder="S/ 0">
                     </div>
-                    <button class="confirmar">Confirmar</button>
+                    <button id="confirmar-deposito" class="confirmar">Confirmar</button>
+                    <div id="saldo-infuciente">
+                       
+                    </div>
                 </div>
                 <div id="billetes-retirar" class="billetes">
                     <div class="billete-20">
@@ -410,13 +413,13 @@
                     <div class="contenedor-retir-ver-saldo">
                         <button class="btn-viendo-saldo">
                             <p>Retirar</p>
-                            <p>y ver Saldo</p>
+                            <p></p>
                         </button>
                     </div>
                     <div class="contenedor-retirar-sin-ver-saldo">
-                        <button class="btn-sin-ver-saldo">
-                            <p>Retirar</p>
-                            <p>sin ver saldo</p>
+                        <button id="volver-operaciones-hoy-detalle-retiro" class="btn-sin-ver-saldo">
+                            <p>Volver</p>
+                            <p></p>
                         </button>      
                     </div>
                 </div>
