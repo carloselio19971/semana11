@@ -35,6 +35,10 @@ verificandotuclave=document.querySelector("#verificando-tu-clave");
 final=document.querySelector("#final");
 finalmontoretirad=document.querySelector("#monto-retirado");
 finalsaldo=document.querySelector("#saldo-final");
+botonSalir=document.querySelector("#boton-salir");
+botonSalirOperaciones=document.querySelector("#boton-salir-operaciones");
+depositarefectivo=document.querySelector("#depositar-efectivo");
+informacionMontoDepositar=document.querySelector("#informacion-monto-depositar");
 
 
 let saldo=0;
@@ -44,6 +48,7 @@ let cuentasBCP =
     {nombre:"Carlos",password:"1254",dni:"73377610",saldo:100},
     {nombre:"Gera",password:"1234",dni:"12345678", saldo:2500},
     {nombre:"Sabi",password:"0912",dni:"44517284", saldo:90},
+    {nombre:"Carlos Eduardo", password:"5412", dni:"07771354", saldo:1590}
 ];
 
 
@@ -144,6 +149,11 @@ document.addEventListener('DOMContentLoaded',()=>{
                 ocultarPantalla(detallesRetiro);
                 mostrarPantalla(ingresClaveCajero);
     });
+    botonSalir.addEventListener("click",()=>{
+        console.log("Di click en salir");
+        ocultarPantalla(ingresarDNI);
+        mostrarPantalla(pantallaInicio);
+    });
     claveCajero.addEventListener("blur",(e)=>{
         const clave=e.target.value;
         const existeClave=cuentasBCP.some((cuenta)=>cuenta.password==clave);
@@ -164,10 +174,6 @@ document.addEventListener('DOMContentLoaded',()=>{
                     setTimeout(() => {
                         ocultarPantalla(final);
                         mostrarPantalla(pantallaInicio);
-                        setTimeout(() => {
-                            ocultarPantalla(pantallaInicio);
-                            mostrarPantalla(ingresarDNI);
-                        }, 3000);
                     }, 3000);
     
                 },3000);
@@ -183,6 +189,15 @@ document.addEventListener('DOMContentLoaded',()=>{
         }
 
     });
+    botonSalirOperaciones.addEventListener("click",()=>{
+        ocultarPantalla(operacionhoy);
+        mostrarPantalla(pantallaInicio);
+    });
+    depositarefectivo.addEventListener("click",()=>{
+            ocultarPantalla(operacionhoy);
+            mostrarPantalla(informacionMontoDepositar);
+    });
+ 
 
 //Ingresando tarjeta
 function ingresarTarjeta(){
@@ -234,8 +249,7 @@ function validarDni(e){
 //Mostar Saldo
 function mostrarsaldo(e){
     iconoSaldo.remove();
-    saldoDisponible.innerHTML=`<p>${saldo}</p>`;
-
+    saldoDisponible.innerHTML=`<p>S/ ${saldo}</p>`;
 }
 
 //Volver Operaciones Hoy
