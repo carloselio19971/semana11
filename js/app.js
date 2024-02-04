@@ -18,11 +18,15 @@ retiraEfectivo=document.querySelector("#seleccione-monto-retirar");
 dineroRetirar=document.querySelector("#billetes-retirar");
 volverOperacionHoyDesdeRetiro=document.querySelector("#volver-operaciones-hoy-desde-retiro");
 detallesRetiro=document.querySelector("#detalle-retiro");
-console.log(detallesRetiro);
+montoRetiro=document.querySelector("#monto-retirar");
+saldoDisponible=document.querySelector("#saldo-disponible");
+dineroRetirarInput=document.querySelector("#dinero-retirar-input");
+
 
 console.log(retiraEfectivo);
 
 let saldo=0;
+let saldoRetirar=0;
 let cuentasBCP =
 [
     {nombre:"Carlos",password:"1234",dni:"73377610",saldo:2500},
@@ -33,8 +37,7 @@ let cuentasBCP =
 
 //Eventos
 document.addEventListener('DOMContentLoaded',()=>{
-
-  
+    
     ingresarTarjeta();
     inputIngresarDNI.addEventListener("blur",validarDni);
     botonmostrarSaldo.addEventListener("click",mostrarsaldo);
@@ -99,10 +102,11 @@ function validarDni(e){
     }
 }
 
+
 //Mostar Saldo
 function mostrarsaldo(e){
     iconoSaldo.remove();
-    contenedorSaldo.innerHTML=`<p>${saldo}</p>`;
+    saldoDisponible.innerHTML=`<p>${saldo}</p>`;
 
 }
 
@@ -130,6 +134,12 @@ ocultarPantalla(retiraEfectivo);
              saldoRetirar=20;
              if(saldo>=saldoRetirar){
                  saldo-=saldoRetirar;
+                
+                 let elemento=document.createElement("h3");
+                    console.log("Saldo a Retirar"+saldoRetirar);
+                    elemento.textContent=`${saldoRetirar}`
+                    montoRetiro.appendChild(elemento);
+
                  ocultarPantalla(retiraEfectivo);
                  mostrarPantalla(detallesRetiro);
 
@@ -141,8 +151,16 @@ ocultarPantalla(retiraEfectivo);
         }
          else if(e.target.classList.contains("billete-50")){
                  saldoRetirar=50;
+
+                 let elemento=document.createElement("h3");
+                 console.log("Saldo a Retirar"+saldoRetirar);
+                 elemento.textContent=`${saldoRetirar}`
+                 montoRetiro.appendChild(elemento);
+
+
              if(saldo>=saldoRetirar){
                  saldo-=saldoRetirar;
+                 
                  ocultarPantalla(retiraEfectivo);
                  mostrarPantalla(detallesRetiro);
              }
@@ -152,6 +170,12 @@ ocultarPantalla(retiraEfectivo);
       }
         else if(e.target.classList.contains("billete-100")){
              saldoRetirar=100;
+             
+             let elemento=document.createElement("h3");
+                    console.log("Saldo a Retirar"+saldoRetirar);
+                    elemento.textContent=`${saldoRetirar}`
+                    montoRetiro.appendChild(elemento);
+
              if(saldo>=saldoRetirar){
                  saldo-=saldoRetirar;
                  ocultarPantalla(retiraEfectivo);
@@ -163,6 +187,12 @@ ocultarPantalla(retiraEfectivo);
         }
         else if(e.target.classList.contains("billete-150")){
              saldoRetirar=150;
+
+             let elemento=document.createElement("h3");
+             console.log("Saldo a Retirar"+saldoRetirar);
+             elemento.textContent=`${saldoRetirar}`
+             montoRetiro.appendChild(elemento);  
+
              if(saldo>=saldoRetirar){
                saldo-=saldoRetirar;
                ocultarPantalla(retiraEfectivo);
@@ -175,4 +205,9 @@ ocultarPantalla(retiraEfectivo);
     
     console.log(saldo);
 }
+
+function validarMontoRetirar(e){
+    console.log(e.target.value);
+}
+
 });
