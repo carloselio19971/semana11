@@ -1,0 +1,1256 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,500;1,100;1,200;1,500&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Roboto:ital,wght@0,400;0,500;0,700;1,300&display=swap');
+
+
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	padding: 0;
+	margin: 0;
+    
+ 
+}
+
+body{
+    background-color: aliceblue;
+}
+
+.ancho-azul{
+    background-color: #03318C;
+}
+
+.ancho-azul-2{
+    background-color:#032886;
+}
+
+.ancho-azul-3{
+    background-color: #012771;
+}
+
+.ancho-3{
+  background-color: #dadcda;
+  ;
+}
+
+.ancho-celeste{
+    background-color: #0F5AF2;
+}
+.ancho-blanco{
+    background-color: white;
+}
+.ancho-azul, .ancho-celeste, .ancho-blanco, .ancho-azul-2, .ancho-azul-3 ,.ancho-3{
+    width: 1200px;
+    height:700px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+.pantalla-inicio{
+  margin-bottom: 100px;
+}
+
+.btn-salir-dni{
+  background-color:#032886;
+  width: 150px;
+  height: 50px;
+  border-radius: 20px;
+  color:white;
+}
+
+.texto-boton-salir{
+  color:white;
+  
+}
+
+.icono-salir-dni{
+  filter: invert(99%) sepia(1%) saturate(137%) hue-rotate(89deg) brightness(115%) contrast(100%); 
+}
+
+.header-pantalla-inicio{
+    display: flex;
+    justify-content: end;
+    height: 100px;
+}
+
+.logo-pantalla-inicio{
+    height: 150px;
+   
+}
+
+.logo-pantalla-inicio img{
+    height: 50%;
+}
+
+.main-pantalla-inicio{
+   display: grid;
+   grid-template-columns: 35% 75%;
+   gap:180px;
+}
+
+.columna-1-pantalla-inicio{
+    padding-left: 50px;
+    border-right: 1px solid white;
+    height: 500px;
+}
+
+.texto-columna-1 h2{
+    margin-top: 90px;
+    color:white;
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-size: 25px;
+}
+
+.texto-columna-1{
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.cobrar-giros{
+    width: 320px;
+    height:150px;
+    background-color:white;
+    border-radius: 20px;
+    
+}
+
+.texto-cobrar-giros{
+  color:#03318C;
+  font-family: "Roboto", sans-serif;
+}
+
+.texto-cobrar-giros h2 {
+    font-size: 30px;
+    font-weight: 300;
+    padding-top: 30px;
+}
+
+.texto-cobrar-giros p{
+    padding-top: 5px;
+    font-size: 20px;
+
+}
+
+.texto-cobrar-giros{
+    padding-left: 40px;
+}
+
+
+.separador-giro {
+    margin-top:10px;
+    background-color: #03318C;
+    width:30px;
+    height: 3px;
+    border: none;
+}
+
+.separador-esperar{
+    margin-top: 20px;
+    background-color:white;
+    height: 5px;
+    border: none;
+    width: 100px;
+}
+
+.texto-columna-2{
+    color:white;
+    font-family: "Roboto", sans-serif;
+}
+
+.texto-columna-2 h2{
+    font-size: 35px;
+    font-family: "Roboto", sans-serif;
+}
+.texto-columna-2 p{
+    margin-top: 10px;
+    font-size: 28px;
+    margin-left:-70px;
+    font-family: "Roboto", sans-serif;
+}
+
+.footer-pantalla-inicio{
+    display: grid;
+    grid-template-columns: 48% 52%;
+
+}
+.datos-cajero{
+background-color:navy;
+height: 120px;
+color:white;
+font-family: "Roboto", sans-serif;
+font-weight: 100px;
+padding-left: 50px;
+padding-top: 20px;
+}
+
+.datos-cajero p{
+    padding-top: 8px;
+}
+.datos-billetes{
+background-color: #0F5AF2;
+height: 120px;
+color:white;
+font-family: "Roboto", sans-serif;
+font-weight: 100px;
+padding-left: 50px;
+}
+
+.datos-billetes h2{
+    color:white;
+    font-family: "Roboto", sans-serif;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    font-size: 20px;
+   
+}
+
+.datos-billetes span{
+    font-size: 35px;
+    font-weight: 500;
+    padding-right: 20px;
+}
+
+.imagen-retiro{
+    width: 600px;
+    height: 460px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: end;
+
+}
+
+.imagen-retiro img {
+    width: 70%;
+}
+
+
+.header-esperar{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.main-esperar-momento{
+    color:white;
+    font-family: "Roboto", sans-serif;
+    padding-left: 100px;
+    padding-top: 90px;
+}
+
+.main-esperar-momento h2{
+    font-size: 40px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+}
+
+/* Ingresar dni*/
+
+.contenedor-boton-salir{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.btn-salir{
+    width:100px;
+    height: 40px;
+    border-radius: 20px;
+    border: 2px solid white;
+    background-color: #032886;
+    color:white;
+    margin-top: 20px;
+    margin-right: 40px;
+    text-align: center;
+}
+
+.main-dni{
+    display: grid;
+    grid-template-columns: 70% 30%;
+}
+
+.columna2-main-imagen{
+    height: 640px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+.columna2-main-imagen img{
+    height: 80%;
+    margin-right: 100px;
+}
+
+.columna-1-main-dni{
+    padding-left: 50px;
+    margin-top: 100px;
+    color:white;
+}
+
+.texto-dni h2{
+    font-family: "Roboto", sans-serif;
+    font-size: 40px;
+    padding-bottom: 2px;
+}
+
+.texto-dni p{
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.ingresa-dni{
+    height: 60px;
+    width: 300px;
+    margin-bottom: 10px;
+    border-radius: 15px;
+    border: 3px solid white;
+    background-color: #032886;
+    color:white;
+    padding-left: 20px;
+    font-size: 20px;
+}
+
+.boton-dni{
+    margin-top: 100px;
+}
+
+.boton-dni button{
+    background-color:#032886;
+    height: 50px;
+    width: 180px;
+    border-radius: 20px;
+    border: 2px solid white;
+    color:white;
+}
+
+
+.icono-salir{
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+}
+
+.icono-volver{
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+}
+
+.btn-salir{
+    font-size: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.texto-boton{
+    margin-left: -10px;
+    font-size: 17px;
+}
+
+.ingresar-sin-dni{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.icono-ingresar-sin-dni{
+    filter: invert(72%) sepia(74%) saturate(6396%) hue-rotate(8deg) brightness(105%) contrast(96%);
+    margin-right: 10px;
+}
+
+.spinner {
+    margin-top: 50px;
+    border: 6px solid rgba(0, 0, 0, 0);
+    border-top: 6px solid white;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 1s linear infinite;
+  }
+
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+
+  .cotenedor-spiner{
+    display: flex;
+    align-items: center;
+  }
+
+  .texto-spinner{
+    padding-left: 50px;
+    font-size: 20px;
+    margin-top:40px;
+    font-family: "Roboto", sans-serif;
+  }
+
+
+
+  .texto-bienvenido{
+    color:white;
+    font-family: "Roboto", sans-serif;
+    padding-left: 40px;
+    padding-top: 20px;
+  }
+
+  .texto-bienvenido p{
+    font-size: 20px;
+    padding-top: 10px;
+    font-weight: 400;
+   
+  }
+
+  .header-operacion-hoy{
+    display: grid;
+    grid-template-columns: 8fr 2fr;
+    margin-bottom: 60px;
+  }
+
+  .main-operaciones{
+    display: grid;
+    grid-template-columns: 60% 40%;
+    margin-top: 40px;
+    margin-left: 30px;
+  }
+
+  .operacione-principales{
+    display: grid;
+    grid-template-columns: 50% 50%;
+  }
+
+  .retirar-efectivo{
+    height: 310px;
+    width: 300px;
+    background-color:white;
+    border-radius: 10px;
+    grid-row: span 2;
+  }
+
+  .transferir-efectivo{
+    background-color: #ed771f;
+    height:140px;
+    width: 300px;
+    border-radius: 10px;
+    margin-bottom: 40px;
+    margin-left: -30px;
+  }
+  .adelanto-sueldo{
+    margin-top: -20px;
+    background-color: #ed771f;
+    height: 140px;
+    width: 300px;
+    border-radius: 10px;
+    margin-left: -30px;
+  }
+
+  .texto-operaciones{
+    color:white;
+    padding-left: 30px;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+  }
+
+  .contenedor-operaciones{
+    padding-left: 30px;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .actualizar-celular , .cambiar-clave{
+    
+    height: 150px;
+    width: 150px;
+    border: 2px solid white;
+    border-radius: 20px;
+   
+  }
+
+  .cambiar-clave{
+    margin-left: -60px;
+  }
+
+  .operaciones{
+    margin-left: -50px;
+  }
+  .icono-cajero{
+    margin-top: 50px;
+    width: 120px;
+    padding-left: 50px;
+    margin-bottom: 30px;
+    filter: invert(11%) sepia(58%) saturate(6681%) hue-rotate(222deg) brightness(79%) contrast(104%);
+  }
+
+  .texto-retirar-efectivo{
+    color:#032886;
+    padding-left: 40px;
+    font-size: 25px;
+    font-family: "Roboto", sans-serif;
+
+  }
+
+  .texto-retirar-efectivo h3{
+    font-weight: 300;
+    padding-bottom: 2px;
+  }
+
+  .texto-retirar-efectivo p {
+    font-weight: 300;
+    padding-bottom: 2px;
+  }
+
+  .texto-retirar-efectivo hr{
+    margin-top: 20px;
+    width: 35px;
+    height: 5px;
+    background-color: #032886;
+    border-radius: 10px;
+  }
+
+
+  .transferir-efectivo, .adelanto-sueldo{
+    color:white;
+    font-size: 30px;
+    font-family: "Roboto", sans-serif;
+    padding-top: 20px;
+    padding-left: 30px;
+  }
+
+  .separador-blanco{
+    margin-top:15px;
+    width: 40px;
+    color:white;
+    height: 4px;
+    background-color: white;
+    border-radius: 10px;
+  }
+
+  .icono-operaciones{
+    height: 100px;
+    padding-top: 30px;
+    padding-left: 30px;
+  }
+
+  .icono-operaciones img{
+    height:35%;
+    filter: invert(100%) sepia(100%) saturate(0%) hue-rotate(288deg) brightness(102%) contrast(102%);
+  }
+
+
+  .texto-informacion-operaciones{
+    color:white;
+    font-size: 20px;
+    padding-left: 30px;
+    margin-top:-30px;
+  }
+
+
+  .contenedor-icono-retirar{
+    height: 100px;
+    padding-right: 20px ;
+    padding-left: 40px;
+  }
+
+  .contenedor-icono-retirar img{
+    height: 50%;
+  } 
+
+  .texto-selecciona-operaciones{
+    display: flex;
+  }
+  .header-seleccion-operaciones{
+    padding-top: 40px;
+    display: grid;
+    grid-template-columns: 85% 15%;
+
+  }
+  .titulo-texto-icono{
+    font-family: "Roboto", sans-serif;
+    color:gray;
+    font-weight: 500;
+  }
+  
+  .parrafo-texto-icono{
+    font-size: 20px;
+    font-weight: 400;
+  }
+
+  .btn-cancelar , .btn-volver  {
+    border: 2px solid black;
+    border-radius: 30px;
+    width: 120px;
+    height: 40px;
+    background-color: white; 
+  }
+
+  .btn-regresar-izquierda{
+    border: 2px solid black;
+    border-radius: 30px;
+    width: 120px;
+    height: 40px;
+    background-color: black; 
+  }
+
+  .contenedor-tipos-cuenta{
+    margin-top: 25px;
+    padding-left: 40px;
+  }
+
+  .texto-cuenta{
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    color:black;
+    font-size: 35px;
+    margin-bottom: 20px;
+  }
+
+
+  .boton-tipo-cuenta-soles,.boton-tipo-cuenta-dolares{
+    height: 150px;
+    width: 300px;
+    
+    border-radius: 20px;
+  }
+  .boton-tipo-cuenta-soles{
+    background-color: #03318C;
+    margin-bottom: 80px;
+  }
+
+  .boton-tipo-cuenta-dolares{
+    background-color: #0F5AF2;
+  }
+
+
+  .texto-boton-cuenta{
+    color:white;
+    font-size: 35px;
+    text-align: center;
+    padding-top: 20px;
+    font-family: "Roboto", sans-serif;
+  }
+
+  .btn-volver{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .texto-boton{
+    font-size: 15px;
+    color:black;
+    font-size: 15px;
+    margin-left: 10px;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  .texto-boton-operaciones{
+    font-size: 15px;
+    color:white;
+    font-size: 15px;
+    margin-left: 10px;
+    font-family: "Roboto", sans-serif;
+  }
+
+  .retirar-soles{
+    height: 300px;
+    width: 300px;
+    background-color: #012771;
+    border-radius: 20px;
+    margin-right: 50px;
+  }
+
+  .retirar-dolares{
+    height: 300px;
+    width: 300px;
+    background-color: #0F5AF2;
+    border-radius: 20px;
+  }
+
+  .main-selecione-monedas{
+    margin-bottom: 50px;
+    margin-left: 40px;
+  }
+
+  .main-selecione-monedas{
+    display: flex;
+    justify-content: center;
+    margin-top: 100px;
+  }
+
+  .icono-retiro{
+    height: 100px;
+    margin-bottom:50px;
+  }
+
+  .icono-retiro img{
+    margin-top: 50px;
+    margin-left: 50px;
+    width: 20%;
+    filter: invert(98%) sepia(12%) saturate(417%) hue-rotate(294deg) brightness(111%) contrast(100%);  
+}
+
+.texto-retiro{
+    color:white;
+    margin-left: 50px;
+    font-size: 32px;
+    font-family: "Roboto", sans-serif;
+}
+
+.texto-retiro hr{
+    margin-top: 10px;
+    background-color: white;
+    width: 50px;
+    height: 5px;
+    border: 1px solid white;
+    border-radius: 20px;
+}
+
+.informacion-billetes-horario{
+    margin-top: 30px;
+    margin-left: 50px;
+    display: flex;
+    justify-content: center;
+}
+
+.billetes-disponibles{
+    color:#012771;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    padding-right: 20px;
+    border-right:1px solid gray;
+}
+
+.billetes{
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+.horario-atencion{
+    margin-right: 20px;
+    display: flex;
+}
+
+.icono-horario{
+    height: 50px;
+    padding-left: 20px;
+}
+
+
+.icono-horario img{
+    height: 50%;
+    filter: invert(70%) sepia(92%) saturate(848%) hue-rotate(108deg) brightness(105%) contrast(101%);
+}
+
+.texto-horario{
+    padding-left: 20px;
+    padding-bottom: 10px;
+    font-size: 20px;
+    color:gray;
+    font-weight: 500;
+}
+
+.texto-horario :nth-child(1){
+    color:#00ffd1;
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 10px;
+}
+
+.informacion-monto-retirar{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 40px;
+}
+
+.billetes{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap:20px;
+}
+
+.billete-20, .billete-50, .billete-100, .billete-150{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #012771;
+    height: 100px;
+    width: 250px;
+    border-radius: 10px;
+    border-bottom: 10px;
+    color:white;
+    font-family: "Roboto", sans-serif;
+    font-size: 30px;
+    
+}
+.monto input {
+    margin-top: 10px;
+    height: 60px;
+    width: 250px;
+    border-radius: 12px;
+    border: 2px solid #012771;
+    margin-bottom: 10px;
+    color:#012771;
+    font-size: 20px;
+    padding-left: 40px;
+
+}
+
+.confirmar{
+    height: 60px;
+    width: 250px;
+    margin-top: 30px;
+    border-radius: 20px;
+    background-color:  #b7b7bf;
+    border: none;
+    color:gray;
+    font-size: 20px;
+}
+
+.ingresar-monto{
+    margin-right: 50px;
+    margin-top: 20px;
+
+}
+
+.texto-ingresar-monto{
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    padding-bottom: 10px;
+}
+
+.footer-cuenta{
+    width: 600px;
+    background-color: white;
+    height: 110px;
+    margin: 0 auto;
+    border-radius: 20px;
+    border: 2px solid #b7b7bf;
+}
+
+.footer-cuenta{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+}
+
+.estilo-cuenta{
+    color:#b7b7bf;
+    font-size: 15px;
+    padding-bottom: 2px;
+    font-weight: 200;
+    font-family: "Roboto", sans-serif;
+}
+
+.parrafo-ahorro-soles{
+    font-size: 15px;
+}
+
+.saldo-disponible{
+    color:black;
+    border: none;
+    margin-top: 10px;
+}
+
+.btn-ver-saldo{
+    width: 120px;
+    height: 50px;
+    border-radius: 12px;
+    background-color: white;
+    border: 1px solid #b7b7bf;
+    color:#012771;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.icono-ver-saldo{
+    height: 20px;
+}
+
+.icono-ver-saldo img{
+    height: 100%;
+    padding-right: 20px;
+    filter: invert(50%) sepia(26%) saturate(1441%) hue-rotate(343deg) brightness(102%) contrast(97%);
+}
+
+
+.texto-retiro{
+    font-family: "Roboto", sans-serif;
+}
+
+.texto-retiro-cajero{
+    text-align: center;
+   
+    padding-top:90px ;
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+}
+
+.texto-retiro-cajero:nth-child(1){
+    font-size: 40px;
+}
+
+.parrafo-retiro{
+    font-family: "Roboto", sans-serif;
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+.contenedor-detalles-retiro{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-top: 50px;
+}
+
+.btn-viendo-saldo{
+  width: 300px;
+  height: 150px;
+  background-color: #012771;
+  border-radius: 20px;
+  color:white;
+  margin-bottom: 30px;
+  font-size: 25px;
+  border:none;
+}
+
+.btn-sin-ver-saldo{
+  width: 300px;
+  height: 150px;
+  background-color: white;
+  border-radius: 20px;
+  color: #012771;
+  font-size: 25px;
+  border:none;
+}
+
+.detalle-retiro{
+  margin-top: 40px;
+  margin-left: 80px;
+  background-color: white;
+  height: 400px;
+  border-radius: 20px;
+}
+
+.botones-ver-sin-ver{
+  margin-top: 100px;
+  margin-left: 40px;
+}
+
+.header-detalle-retiro{
+  display: flex;
+  justify-content: space-around;
+  margin-top:40px;
+}
+
+.header-detalle-retiro p{
+  color:#ada4a4;
+  font-weight: 700px;
+  font-size: 15px;
+  font-family: "Roboto", sans-serif;
+}
+
+.monto-retirar{
+  margin-top: 30px;
+  text-align: center;
+  font-family: "Roboto", sans-serif;
+}
+
+.monto-retirar p{
+  font-size: 15px;
+  font-weight: 100;
+}
+
+.monto-retirar h3{
+  font-size: 50px;
+  margin-top: 10px;
+  color: #012771;
+  font-weight: 100;
+}
+
+.footer-retirar{
+  padding-top: 50px;
+  display: flex;
+  justify-content: space-around;
+  color:#ada4a4;
+}
+
+.contenedor-boton{
+  text-align: center;
+}
+
+.btn-primir-boucher{
+    margin-top: 50px;
+    height: 50px;
+    width: 200px;
+    border-radius: 20px;
+    background: white;
+    border: 1px solid #ada4a4;
+}
+
+.icono{
+  width: 20px;
+}
+
+.icono img{
+  width: 100%;
+}
+
+.btn-primir-boucher{
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 180px;
+}
+
+.texto-imprimir{
+  padding-left: 20px;
+  color:#ada4a4;
+}
+
+
+
+
+.ingresa-tu-clave{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.imagen-cajero{
+  height: 700px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
+ 
+}
+
+.imagen-cajero img {
+  height: 80%;
+}
+
+.ingresa-clave{
+
+  margin-top: 150px;
+  margin-left: 150px;
+  color:white;
+  font-family: "Roboto", sans-serif;
+}
+
+.ingresa-clave p {
+  font-size: 50px;
+}
+
+.ingresa-clave p:nth-child(2){
+  padding-top: 10px;
+  font-size: 30px;
+  padding-bottom: 20px;
+}
+
+.input-retiro{
+    height: 80px;
+    width: 400px;
+    border: 2px solid white;
+    border-radius: 20px;
+    margin-top: 30px;
+    background-color:#012771;
+    color:white;
+    font-size: 25px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.input-retiro input{
+  background-color: #012771;
+  color:white;
+  height: 70px;
+  width: 250px;
+  border: white;
+  font-size: 30px;
+}
+
+.clave{
+  width: 60px;
+  filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(320deg) brightness(110%) contrast(102%);
+}
+
+
+.verificando-tu-clave{
+  padding-top: 20px;
+}
+
+.contenedor-spiner{
+  display: flex;
+  padding-top: 40px;
+  
+}
+
+.verificando{
+  font-size: 25px;
+  padding-top: 65px;
+  padding-left: 30px;
+}
+
+.verificando-tu-clave{
+  display: none;
+}
+
+.texto-autorizando{
+  padding-top:200px;
+  padding-left: 160px;
+  color:white;
+  font-family: "Roboto", sans-serif;
+}
+
+.texto-autorizando h3{
+  font-size: 50px;
+
+}
+
+.texto-autorizando p{
+  padding-top: 20px;
+  font-size: 30px;
+}
+
+.texto-autorizando hr{
+  height: 5px;
+  margin-top: 50px;
+  width: 100px;
+  color:white;
+  background-color: white;
+  border-radius: 20px;
+  border:none;
+}
+
+
+
+.final{
+  text-align: center;
+  padding-top: 100px;
+}
+
+.texto-estamos-contigo{
+  padding-top: 20px;
+}
+
+.texto-estamos-contigo p{
+  color:#03318C;
+  font-family: "Roboto", sans-serif;
+}
+.texto-estamos-contigo p:nth-child(1){
+  font-size: 30px;
+}
+
+.texto-estamos-contigo p:nth-child(2){
+  padding-top: 20px;
+  font-size: 40px;
+}
+.texto-estamos-contigo p:nth-child(3){
+  font-size: 40px;
+}
+
+.unidos-peru{
+  margin-top: 100px;
+  color:#032886;
+  font-size: 30px;
+}
+
+.unidos-peru p{
+  font-size: 20px;
+}
+
+
+
+.mostrar-saldo{
+  display: none;
+}
+ .pantalla-inicio{
+ 
+}
+.esperar-momento{
+   display: none;
+}
+.ingresar-dni{
+   display: none;
+}
+	
+  .validando-ingresar-dni{
+    display: none;
+  }
+  
+    .operacion-hoy{
+        display: none;
+  }
+
+
+ .seleciones-top-cuenta{
+    display: none;
+  }
+  
+  .seleccione-moneda-retirar{
+    display: none;
+}
+
+.seleccione-monto-retirar{
+    display: none;
+}
+
+.detalles-retiro {
+  display: none;
+}
+
+.autorizando{
+  display: none;
+}
+
+.final{
+  display: none;
+}
+
+.ingresa-tu-clave{
+  display: none;
+}
+
+
+
+.spinner-2 {
+  margin:-10px;
+  width: 70px;
+  text-align: center;
+  margin-left: 150px;
+}
+
+.spinner-2 > div {
+  width: 18px;
+  height: 18px;
+  background-color: white;
+
+  border-radius: 100%;
+  display: inline-block;
+  -webkit-animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+  animation: sk-bouncedelay 1.4s infinite ease-in-out both;
+}
+
+.spinner-2 .bounce1 {
+  -webkit-animation-delay: -0.32s;
+  animation-delay: -0.32s;
+}
+
+.spinner-2 .bounce2 {
+  -webkit-animation-delay: -0.16s;
+  animation-delay: -0.16s;
+}
+
+@-webkit-keyframes sk-bouncedelay {
+  0%, 80%, 100% { -webkit-transform: scale(0) }
+  40% { -webkit-transform: scale(1.0) }
+}
+
+@keyframes sk-bouncedelay {
+  0%, 80%, 100% { 
+    -webkit-transform: scale(0);
+    transform: scale(0);
+  } 40% { 
+    -webkit-transform: scale(1.0);
+    transform: scale(1.0);
+  }
+}
