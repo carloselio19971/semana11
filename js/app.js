@@ -39,10 +39,17 @@ botonSalir=document.querySelector("#boton-salir");
 botonSalirOperaciones=document.querySelector("#boton-salir-operaciones");
 depositarefectivo=document.querySelector("#depositar-efectivo");
 informacionMontoDepositar=document.querySelector("#informacion-monto-depositar");
+volverOperacionesDesdeEfectivSoles=document.querySelector("#volver-operacione-desde-deposito-en-efectivo-soles");
+depositaEfectivoDinero=document.querySelector("#dinero-depositar-efectivo");
+inputDepositarEfectivoDinero=document.querySelector("#input-depositar-efecto-dinero");
+textoMensajeDesposito=document.querySelector("#texto-mensaje-deposito");
+btnDepositarDineroEnEfectivo=document.querySelector("#btn-depositar-dinero-en-efectivo");
+btnCancelarDeposito=document.querySelector("#btn-cancelar-deposito-efectivo");
 
 
 let saldo=0;
 let saldoRetirar=0;
+let montoDepositar=0;
 let cuentasBCP =
 [
     {nombre:"Carlos",password:"1254",dni:"73377610",saldo:100},
@@ -193,11 +200,55 @@ document.addEventListener('DOMContentLoaded',()=>{
         ocultarPantalla(operacionhoy);
         mostrarPantalla(pantallaInicio);
     });
-    depositarefectivo.addEventListener("click",()=>{
-            ocultarPantalla(operacionhoy);
-            mostrarPantalla(informacionMontoDepositar);
+    volverOperacionesDesdeEfectivSoles.addEventListener("click",()=>{
+            ocultarPantalla(depositaEfectivoDinero);
+            mostrarPantalla(operacionhoy);
     });
- 
+    depositarefectivo.addEventListener("click",()=>{
+        ocultarPantalla(operacionhoy);
+        mostrarPantalla(depositaEfectivoDinero);
+    });
+   inputDepositarEfectivoDinero.addEventListener("input",(e)=>{
+       textoMensajeDesposito.innerHTML="";
+       montoDepositar=Number.parseInt(e.target.value);
+      // //console.log(montoDepositar)
+      //if(!montoDepositar%10===0){
+      // console.log("Monto Valido")
+      // //textoMensajeDesposito.innerHTML=`<p>Monto no valido <p>`
+      //}
+      //else {
+      // console.log("Monto no Valido");
+      // //textoMensajeDesposito.innerHTML=`<p>Monto correcto <p>`
+      //}
+   });
+
+    btnDepositarDineroEnEfectivo.addEventListener("click",()=>{
+        textoMensajeDesposito.innerHTML="";
+        if(montoDepositar%10===0){
+            console.log("Monto Valido");
+            console.log("Monto Deposito"+montoDepositar);
+            //console.log("Saldo Inicial"+saldo);
+            saldo=saldo+montoDepositar;
+            console.log("Saldo Final"+saldo);
+            mostrarsaldo();
+
+        }
+        else {
+            textoMensajeDesposito.innerHTML=`<p>Solo se aceptan Billetes<p>`
+            console.log("Monto No Valido");
+        }
+        
+
+    });
+    btnCancelarDeposito.addEventListener("click",()=>{
+        mostrarsaldo();
+        mostrarPantalla(depositaEfectivoDinero);
+        mostrarPantalla(operacionhoy);
+    });
+
+
+
+
 
 //Ingresando tarjeta
 function ingresarTarjeta(){
@@ -346,6 +397,10 @@ function MensajeSaldoInsuficiente(){
     mensajeSaldoInsuficiente.style.marginTop ="25px";
     saldoInsuficiente.appendChild(mensajeSaldoInsuficiente);
 }
+
+
+
+
 
 });
 

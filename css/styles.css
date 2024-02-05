@@ -1271,3 +1271,66 @@ padding-left: 50px;
   padding: 20px;
   color:white;
 }
+
+.depositar-dinero-efectivo{
+  padding-top: 50px;
+  display: grid;
+  justify-content: center;
+}
+
+.texto-depositar{
+  font-size: 40px;
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 50px;
+}
+
+.input-depositar input{
+  height: 70px;
+  width: 350px;
+  text-align: center;
+  border-radius: 20px;
+  color:#012771;
+  font-size: 20px;
+  border: solid 2px #012771;
+  margin-left: 150px;
+  
+}
+
+.contenedor-boton-depositar-en-efectivo{
+  margin-top: 50px;
+  text-align: center;
+}
+
+.btn-depositar-en-efectivo{
+  height: 60px;
+  width: 300px;
+  background-color: #012771;
+  color:white;
+  border-radius: 30px;
+}
+
+#dinero-depositar-efectivo{
+  display: none;
+}
+
+.texto-mensaje-deposito{
+  font-size: 40px;
+  margin-top: 10px;
+}
+
+.contenedor-botones-deposito{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-cancelar-deposito-en-efectivo{
+  height: 60px;
+  width: 300px;
+  background-color:white;
+  color:#012771;
+  border: 1px solid #012771;
+  border-radius: 30px;
+  margin-top: 34px;
+  margin-left: 40px;
+}

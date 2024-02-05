@@ -455,16 +455,7 @@
                             <p>Ahorro Soles</p>
                         </div>
                     </div>
-                    <div class="contenedor-boton">
-                        <button class="btn-primir-boucher">
-                            <div class="icono">
-                                <img src="iconos/impresora.svg">
-                            </div> 
-                            <div class="texto-imprimir">
-                                Imprimir Voucher
-                            </div>
-                        </button>
-                    </div>
+                    
                 </div>
                 <div class="botones-ver-sin-ver">
                     <div  class="contenedor-retir-ver-saldo">
@@ -482,7 +473,6 @@
             </div>
            
         </div>
-
         <!--Ingres tu clave-->
         <div id="ingresa-tu-clave-cajero" class="ingresa-tu-clave ancho-azul-3">
             <div class="ingresa-clave">
@@ -558,6 +548,51 @@
                     </div>
                 </div>
         </div>
+        <!--Depositar en efectivo-->
+        <div id="dinero-depositar-efectivo" class="dinero-depositar ancho-blanco">
+            <div class="header-seleccion-operaciones">
+                <div class="texto-selecciona-operaciones">
+                    <div class="contenedor-icono-retirar">
+                        <img src="iconos/cajero-automatico.svg">
+                    </div>
+                    <div class="texto-icono">
+                        <p class="titulo-texto-icono">Deposito efectivo</p>
+                        <p class="parrafo-texto-icono">Selecciona la depositar</p>
+                    </div>
+                </div>
+                <div class="boton-volver">
+                    <button id="volver-operacione-desde-deposito-en-efectivo-soles" class="btn-volver">
+                        <div class="icono">
+                            <img class="icono-volver" src="iconos/volver-flecha-izquierda.svg">
+                        </div>
+                        <div class="texto-boton">
+                            Volver
+                        </div>
+                    </button>
+                </div>
+            </div>
+            <div class="depositar-dinero-efectivo">
+                <div class="texto-depositar">
+                  <p>Introduzca la cantidad a depositar</p>  
+                </div>
+                <div class="input-depositar">
+                    <input id="input-depositar-efecto-dinero" type="number" placeholder="ingrese monto retirar">
+                </div>
+                <div id="texto-mensaje-deposito" class="texto-mensaje-deposito">
+                    
+                </div>
+            </div>
+            <div class="contenedor-botones-deposito">
+                <div class="contenedor-boton-depositar-en-efectivo">
+                    <button id="btn-depositar-dinero-en-efectivo" class="btn-depositar-en-efectivo" >Depositar</button>
+                </div>
+                <div class="contenededor-cancelar-deposito">
+                    <button id="btn-cancelar-deposito-efectivo" class="btn-cancelar-deposito-en-efectivo" > Cancelar </button>
+                </div>
+            </div>
+           
+        </div>
+
     </div>
      <script src="js/app.js"></script> 
 </body>
