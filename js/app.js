@@ -45,6 +45,11 @@ inputDepositarEfectivoDinero=document.querySelector("#input-depositar-efecto-din
 textoMensajeDesposito=document.querySelector("#texto-mensaje-deposito");
 btnDepositarDineroEnEfectivo=document.querySelector("#btn-depositar-dinero-en-efectivo");
 btnCancelarDeposito=document.querySelector("#btn-cancelar-deposito-efectivo");
+DetalleDepositoEfecitvo=document.querySelector("#detalle-deposito-efectivo");
+montodepositoactual=document.querySelector("#deposito-actual");
+botonVolverDeposito=document.querySelector("#depositar-diner");
+RegresarDesdeDeposito=document.querySelector("#regresar-desde-deposito");
+
 
 
 let saldo=0;
@@ -164,7 +169,7 @@ document.addEventListener('DOMContentLoaded',()=>{
     claveCajero.addEventListener("blur",(e)=>{
         const clave=e.target.value;
         const existeClave=cuentasBCP.some((cuenta)=>cuenta.password==clave);
-        finalmontoretirad.innerHTML=`Monto Retirado S/ ${saldoRetirar} `
+       // finalmontoretirad.innerHTML=`Monto Retirado S/ ${saldoRetirar} `
         finalsaldo.innerHTML=`Saldo Final S/ ${saldo}`
 
         console.log(existeClave);
@@ -223,29 +228,40 @@ document.addEventListener('DOMContentLoaded',()=>{
    });
 
     btnDepositarDineroEnEfectivo.addEventListener("click",()=>{
+
         textoMensajeDesposito.innerHTML="";
         if(montoDepositar%10===0){
-            console.log("Monto Valido");
             console.log("Monto Deposito"+montoDepositar);
             //console.log("Saldo Inicial"+saldo);
             saldo=saldo+montoDepositar;
             console.log("Saldo Final"+saldo);
+            ocultarPantalla(depositaEfectivoDinero);
+            mostrarPantalla(DetalleDepositoEfecitvo);
+            montodepositoactual.innerHTML=`${montoDepositar}`;
+            montodepositoactual.style.marginTop="150px";
+            montodepositoactual.style.fontSize="50px";
+            montodepositoactual.style.paddingRight="150px"
             mostrarsaldo();
-
+            ocultarPantalla(DetalleDepositoEfecitvo);
+            mostrarPantalla(ingresClaveCajero);
+            
         }
-        else {
-            textoMensajeDesposito.innerHTML=`<p>Solo se aceptan Billetes<p>`
-            console.log("Monto No Valido");
+        else{
+            textoMensajeDesposito.innerHTML=`<p>Monto no valido <p>`
         }
-        
+       
 
+    });
+    RegresarDesdeDeposito.addEventListener("click",()=>{
+            saldo-=montoDepositar;
+            ocultarPantalla(DetalleDepositoEfecitvo);
+            mostrarPantalla(operacionhoy);
+            mostrarsaldo();
     });
     btnCancelarDeposito.addEventListener("click",()=>{
-        mostrarsaldo();
-        mostrarPantalla(depositaEfectivoDinero);
+        ocultarPantalla(depositaEfectivoDinero);
         mostrarPantalla(operacionhoy);
     });
-
 
 
 

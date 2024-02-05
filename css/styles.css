@@ -1199,7 +1199,7 @@ padding-left: 50px;
 }
 
 .detalles-retiro {
-  display: none;
+   display: none; 
 }
 
 .autorizando{
@@ -1214,6 +1214,9 @@ padding-left: 50px;
   display: none;
 }
 
+.detalle-deposito-efectivo{
+  display: none;
+}
 
 
 .spinner-2 {
@@ -1334,3 +1337,72 @@ padding-left: 50px;
   margin-top: 34px;
   margin-left: 40px;
 }
+
+.contenedor-deposito-efectivo{
+  text-align: center;
+  font-size: 20px;
+  padding-top: 150px;
+  font-family: "Roboto", sans-serif;
+}
+
+.contenedor-detalles-deposito{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 50px;
+  margin-left: 150px;
+
+}
+
+.informacion-deposito{
+  font-family: "Roboto", sans-serif;
+  background-color: white;
+  height: 400px;
+  border-radius: 20px;
+
+}
+
+.contenedor-botones-deposito{
+  display: flex;
+  flex-direction: column;
+}
+
+.botones-deposito button{
+  width: 300px;
+  height: 150px;
+  background-color: #012771;
+  border-radius: 20px;
+  color: white;
+  margin-bottom: 30px;
+  font-size: 25px;
+  border: none;
+}
+
+.boton-volver-deposito button{
+  width: 300px;
+  height: 150px;
+  background-color: white;
+  border-radius: 20px;
+  color: #012771;
+  font-size: 25px;
+  border: none;
+}
+
+.informacion-deposito{
+  display: flex;
+  justify-content: space-between;
+}
+
+
+.informacion-deposito{
+  display: flex;
+  justify-content: center;
+
+}
+.texto-detalle-deposito {
+  margin-top: 50px;
+  font-size: 20px;
+  margin-left: 100px;
+}
+
+
+
